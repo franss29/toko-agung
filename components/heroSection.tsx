@@ -63,10 +63,10 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="flex justify-center items-center relative">
             <div className="relative z-10 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <Image
-                src="/placeholder.svg?height=400&width=500"
+                src="/dark_logo_agung-removebg-preview.png"
                 alt="Toko alat tulis dengan berbagai produk"
                 width={500}
                 height={400}

@@ -42,7 +42,7 @@ export function SidebarNav() {
       <div className="flex h-full max-h-screen flex-col">
         <div className="flex h-14 items-center border-b px-4">
           <Link href="/dashboard" className="flex items-center gap-2 font-semibold">
-            <Image src="/images/logo-toko-agung.png" alt="Toko Agung Logo" width={24} height={24} className="w-6 h-6" />
+            <Image src="/logoTokoAgung.png" alt="Toko Agung Logo" width={24} height={24} className="w-6 h-6" />
             <span className="text-[#2D2D2D]">Toko Agung</span>
           </Link>
         </div>

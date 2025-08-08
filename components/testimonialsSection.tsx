@@ -1,12 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Star, Quote } from "lucide-react"
-import Image from "next/image"
 
 const testimonials = [
   {
     name: "Sarah Putri",
     role: "Mahasiswa UI",
-    image: "/placeholder.svg?height=60&width=60",
+    image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&h=60&w=60&fit=crop",
     rating: 5,
     text: "Pelayanan sangat cepat dan hasil print berkualitas tinggi! Harga juga sangat terjangkau untuk kantong mahasiswa. Sudah langganan di sini sejak semester 1.",
     highlight: "Pelayanan cepat dan berkualitas",
@@ -14,7 +13,7 @@ const testimonials = [
   {
     name: "Budi Santoso",
     role: "Karyawan Swasta",
-    image: "/placeholder.svg?height=60&width=60",
+    image: "pelayan-toko.jpg",
     rating: 5,
     text: "Lokasi strategis dekat kantor, buka sampai malam, dan staff yang ramah. Cocok banget buat yang sering lembur dan butuh print mendadak.",
     highlight: "Lokasi strategis dan buka sampai malam",
@@ -22,7 +21,7 @@ const testimonials = [
   {
     name: "Dr. Maya Sari",
     role: "Dosen",
-    image: "/placeholder.svg?height=60&width=60",
+    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&h=60&w=60&fit=crop",
     rating: 5,
     text: "Untuk kebutuhan print materi kuliah dan penelitian, CopyCenter selalu jadi pilihan utama. Hasil jilid spiral rapi dan tahan lama.",
     highlight: "Hasil jilid rapi dan tahan lama",
@@ -50,12 +49,12 @@ export function TestimonialsSection() {
 
               <CardContent className="p-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <Image
-                    src={testimonial.image || "/placeholder.svg"}
+                  <img
+                    src={testimonial.image}
                     alt={testimonial.name}
                     width={60}
                     height={60}
-                    className="rounded-full border-2 border-blue-100"
+                    className="rounded-full border-2 border-blue-100 object-cover"
                   />
                   <div>
                     <h3 className="font-semibold text-gray-900">{testimonial.name}</h3>
