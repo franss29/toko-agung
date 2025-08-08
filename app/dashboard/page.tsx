@@ -3,7 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Package, ShoppingCart, TrendingUp } from "lucide-react"
-import { SalesChart } from "@/components/sales-chart"
+import { LineChart } from "@/components/sales-chart"
 import { TopProductsTable } from "@/components/top-products-table"
 
 export default function DashboardPage() {
@@ -53,7 +53,7 @@ export default function DashboardPage() {
               <CardTitle className="text-[#2D2D2D]">Grafik Penjualan Mingguan</CardTitle>
             </CardHeader>
             <CardContent className="pl-2">
-              <SalesChart />
+              <LineChart />
             </CardContent>
           </Card>
         </TabsContent>
@@ -63,7 +63,7 @@ export default function DashboardPage() {
               <CardTitle className="text-[#2D2D2D]">Grafik Penjualan Bulanan</CardTitle>
             </CardHeader>
             <CardContent className="pl-2">
-              <SalesChart monthly />
+              <LineChart/>
             </CardContent>
           </Card>
         </TabsContent>

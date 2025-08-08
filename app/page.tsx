@@ -1,5 +1,4 @@
 import { AboutSection } from "@/components/aboutSection";
-import { GallerySection } from "@/components/gallerySection";
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/heroSection";
 import { LocationSection } from "@/components/locationSection";
@@ -10,6 +9,7 @@ import { UploadSection } from "@/components/uploadSection";
 import { FAQSection } from "@/components/faqSection";
 import { ContactSection } from "@/components/contactSection";
 import { Footer } from "@/components/footer";
+import GallerySection from "@/components/gallerySection";
 
 
 
