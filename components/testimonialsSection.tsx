@@ -1,3 +1,6 @@
+"use client"
+
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Star, Quote } from "lucide-react"
 
@@ -5,9 +8,11 @@ const testimonials = [
   {
     name: "Sarah Putri",
     role: "Mahasiswa UI",
-    image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&h=60&w=60&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&h=60&w=60&fit=crop",
     rating: 5,
-    text: "Pelayanan sangat cepat dan hasil print berkualitas tinggi! Harga juga sangat terjangkau untuk kantong mahasiswa. Sudah langganan di sini sejak semester 1.",
+    text:
+      "Pelayanan sangat cepat dan hasil print berkualitas tinggi! Harga juga sangat terjangkau untuk kantong mahasiswa. Sudah langganan di sini sejak semester 1.",
     highlight: "Pelayanan cepat dan berkualitas",
   },
   {
@@ -15,15 +20,19 @@ const testimonials = [
     role: "Karyawan Swasta",
     image: "pelayan-toko.jpg",
     rating: 5,
-    text: "Lokasi strategis dekat kantor, buka sampai malam, dan staff yang ramah. Cocok banget buat yang sering lembur dan butuh print mendadak.",
+    // Escape tanda kutip ganda di dalam string
+    text:
+      "Lokasi strategis dekat kantor, buka sampai malam, dan staff yang ramah. Cocok banget buat yang sering lembur dan butuh print mendadak.",
     highlight: "Lokasi strategis dan buka sampai malam",
   },
   {
     name: "Dr. Maya Sari",
     role: "Dosen",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&h=60&w=60&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&h=60&w=60&fit=crop",
     rating: 5,
-    text: "Untuk kebutuhan print materi kuliah dan penelitian, CopyCenter selalu jadi pilihan utama. Hasil jilid spiral rapi dan tahan lama.",
+    text:
+      "Untuk kebutuhan print materi kuliah dan penelitian, CopyCenter selalu jadi pilihan utama. Hasil jilid spiral rapi dan tahan lama.",
     highlight: "Hasil jilid rapi dan tahan lama",
   },
 ]
@@ -33,9 +42,12 @@ export function TestimonialsSection() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Testimoni Pelanggan</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            Testimoni Pelanggan
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Dengarkan langsung dari pelanggan setia kami tentang pengalaman menggunakan layanan CopyCenter.
+            Dengarkan langsung dari pelanggan setia kami tentang pengalaman
+            menggunakan layanan CopyCenter.
           </p>
         </div>
 
@@ -45,23 +57,30 @@ export function TestimonialsSection() {
               key={index}
               className="border-none shadow-xl hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden"
             >
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500" />
 
               <CardContent className="p-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    width={60}
-                    height={60}
-                    className="rounded-full border-2 border-blue-100 object-cover"
-                  />
+                  <div className="relative w-15 h-15 rounded-full overflow-hidden border-2 border-blue-100">
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      width={60}
+                      height={60}
+                      className="object-cover"
+                    />
+                  </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">{testimonial.name}</h3>
+                    <h3 className="font-semibold text-gray-900">
+                      {testimonial.name}
+                    </h3>
                     <p className="text-sm text-gray-600">{testimonial.role}</p>
                     <div className="flex items-center gap-1 mt-1">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        <Star
+                          key={i}
+                          className="h-4 w-4 fill-yellow-400 text-yellow-400"
+                        />
                       ))}
                     </div>
                   </div>
@@ -69,11 +88,15 @@ export function TestimonialsSection() {
 
                 <div className="relative">
                   <Quote className="absolute -top-2 -left-2 h-8 w-8 text-blue-200" />
-                  <p className="text-gray-700 italic mb-4 pl-6">"{testimonial.text}"</p>
+                  <p className="text-gray-700 italic mb-4 pl-6">
+                    &quot;{testimonial.text}&quot;
+                  </p>
                 </div>
 
                 <div className="bg-blue-50 rounded-lg p-3 border-l-4 border-blue-500">
-                  <p className="text-sm font-medium text-blue-800">💡 {testimonial.highlight}</p>
+                  <p className="text-sm font-medium text-blue-800">
+                    💡 {testimonial.highlight}
+                  </p>
                 </div>
               </CardContent>
             </Card>

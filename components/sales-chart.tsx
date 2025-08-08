@@ -1,7 +1,5 @@
 "use client"
 
-import { useRef } from "react"
-import { Line } from "react-chartjs-2"
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -11,79 +9,25 @@ import {
   Title,
   Tooltip,
   Legend,
-  type ChartData,
+  Filler,
+  ChartOptions,
+  ChartData,
+  TooltipItem,
 } from "chart.js"
+import { Line } from "react-chartjs-2"
 
-// Registrasi komponen Chart.js
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler
+)
 
-// Data dummy untuk grafik penjualan mingguan
-const weeklyData: ChartData<"line"> = {
-  labels: ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"],
-  datasets: [
-    {
-      label: "Penjualan",
-      data: [650000, 590000, 800000, 810000, 960000, 1050000, 750000],
-      borderColor: "rgb(59, 130, 246)",
-      backgroundColor: "rgba(59, 130, 246, 0.1)",
-      tension: 0.3,
-      fill: true,
-    },
-  ],
-}
-
-// Data dummy untuk grafik penjualan bulanan
-const monthlyData: ChartData<"line"> = {
-  labels: [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
-    "15",
-    "16",
-    "17",
-    "18",
-    "19",
-    "20",
-    "21",
-    "22",
-    "23",
-    "24",
-    "25",
-    "26",
-    "27",
-    "28",
-    "29",
-    "30",
-  ],
-  datasets: [
-    {
-      label: "Penjualan",
-      data: [
-        450000, 520000, 580000, 620000, 590000, 650000, 700000, 680000, 720000, 750000, 800000, 820000, 780000, 760000,
-        800000, 850000, 900000, 950000, 920000, 880000, 850000, 900000, 950000, 1000000, 1050000, 1100000, 1050000,
-        980000, 920000, 950000,
-      ],
-      borderColor: "rgb(59, 130, 246)",
-      backgroundColor: "rgba(59, 130, 246, 0.1)",
-      tension: 0.3,
-      fill: true,
-    },
-  ],
-}
-
-// Opsi chart
-const options = {
+const options: ChartOptions<"line"> = {
   responsive: true,
   maintainAspectRatio: false,
   plugins: {
@@ -92,11 +36,9 @@ const options = {
     },
     tooltip: {
       callbacks: {
-        label: (context: any) => {
+        label: (context: TooltipItem<"line">) => {
           let label = context.dataset.label || ""
-          if (label) {
-            label += ": "
-          }
+          if (label) label += ": "
           if (context.parsed.y !== null) {
             label += new Intl.NumberFormat("id-ID", {
               style: "currency",
@@ -118,27 +60,46 @@ const options = {
     y: {
       beginAtZero: true,
       ticks: {
-        callback: (value: any) =>
+        callback: (value: number | string) =>
           new Intl.NumberFormat("id-ID", {
             style: "currency",
             currency: "IDR",
             minimumFractionDigits: 0,
-          }).format(value),
+          }).format(Number(value)),
       },
     },
   },
 }
 
-interface SalesChartProps {
-  monthly?: boolean
+const labels = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "Mei",
+  "Jun",
+  "Jul",
+  "Agu",
+  "Sep",
+  "Okt",
+  "Nov",
+  "Des",
+]
+
+const data: ChartData<"line"> = {
+  labels,
+  datasets: [
+    {
+      fill: true,
+      label: "Pendapatan",
+      data: [400000, 450000, 600000, 550000, 700000, 750000, 800000, 850000, 900000, 950000, 1000000, 1100000],
+      borderColor: "rgb(99, 102, 241)",
+      backgroundColor: "rgba(99, 102, 241, 0.1)",
+      tension: 0.4,
+    },
+  ],
 }
 
-export function SalesChart({ monthly = false }: SalesChartProps) {
-  const chartRef = useRef<HTMLDivElement>(null)
-
-  return (
-    <div ref={chartRef} className="h-[300px] w-full">
-      <Line data={monthly ? monthlyData : weeklyData} options={options} />
-    </div>
-  )
+export function LineChart() {
+  return <Line options={options} data={data} />
 }

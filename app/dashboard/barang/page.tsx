@@ -91,8 +91,8 @@ export default function BarangPage() {
       if (response.ok && data.records) {
         setKategoriList(data.records)
       }
-    } catch (error) {
-      console.error("Error fetching kategori:", error)
+    } catch (_) {
+      console.error("Error fetching kategori")
     }
   }
 
@@ -165,7 +165,7 @@ export default function BarangPage() {
       } else {
         setError(data.message || "Gagal menambahkan barang")
       }
-    } catch (error) {
+    } catch (_) {
       setError("Terjadi kesalahan saat menambahkan barang")
     } finally {
       setLoading(false)
@@ -207,7 +207,7 @@ export default function BarangPage() {
       } else {
         setError(data.message || "Gagal mengupdate barang")
       }
-    } catch (error) {
+    } catch (_) {
       setError("Terjadi kesalahan saat mengupdate barang")
     } finally {
       setLoading(false)
@@ -239,8 +239,10 @@ export default function BarangPage() {
       } else {
         setError(data.message || "Gagal menghapus barang")
       }
-    } catch (error) {
-      setError("Terjadi kesalahan saat menghapus barang")
+    } catch (_) {
+      console.error("Error fetching barang")
+      setError("Gagal memuat data barang")
+      setBarangList([])
     } finally {
       setLoading(false)
     }
