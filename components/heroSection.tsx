@@ -50,7 +50,7 @@ export function HeroSection() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8">
               <div className="flex items-center gap-2 text-green-100">
                 <MapPin className="h-5 w-5 text-[#00C559]" />
-                <span className="text-sm">Jl. Pendidikan No. 45</span>
+                <span className="text-sm">Jl. Syekh Bayanillah No.609</span>
               </div>
               <div className="flex items-center gap-2 text-green-100">
                 <Clock className="h-5 w-5 text-[#00C559]" />

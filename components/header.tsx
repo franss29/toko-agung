@@ -76,7 +76,7 @@ export function Header() {
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1">
                 <MapPin className="h-4 w-4" />
-                <span>Jl. Pendidikan No. 45, Jakarta Timur</span>
+                <span>Jl. Syekh Bayanillah No.609, Setu Wetan</span>
               </div>
               <div className="hidden sm:flex items-center gap-2">
                 <Button
@@ -200,7 +200,7 @@ export function Header() {
                   <div className="flex items-center justify-between p-6 border-b">
                     <div className="flex items-center gap-3">
                       <Image
-                        src="/images/logo-toko-agung.png"
+                        src="/logoTokoAgung.png"
                         alt="Toko Agung Logo"
                         width={32}
                         height={32}
@@ -260,7 +260,7 @@ export function Header() {
                       </div>
                       <div className="flex items-center gap-2 text-sm text-gray-600">
                         <MapPin className="h-4 w-4" />
-                        <span>Jl. Pendidikan No. 45</span>
+                        <span>Jl. Syekh Bayanillah</span>
                       </div>
                     </div>
 

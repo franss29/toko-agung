@@ -187,7 +187,7 @@ ${formData.message}`
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                      <p className="text-gray-600 mb-2">info@copycenter.com</p>
+                      <p className="text-gray-600 mb-2">info@tokoagung.com</p>
                       <p className="text-sm text-gray-500">Respon dalam 2-4 jam</p>
                     </div>
                   </div>
@@ -199,9 +199,9 @@ ${formData.message}`
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Alamat</h4>
                       <p className="text-gray-600 mb-2">
-                        Jl. Sudirman No. 123
+                        Jl. Syekh Bayanillah No.609
                         <br />
-                        Jakarta Selatan 12190
+                        Setu Wetan
                       </p>
                       <p className="text-sm text-gray-500">Dekat kampus dan perkantoran</p>
                     </div>

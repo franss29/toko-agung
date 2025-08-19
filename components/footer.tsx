@@ -74,7 +74,7 @@ export function Footer() {
             <div className="space-y-3 text-sm text-gray-400">
               <div className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5" />
-                <span>Jl. Pendidikan No. 45, Jakarta Timur</span>
+                <span>Jl. Syekh Bayanillah No.609, Setu Wetan</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />

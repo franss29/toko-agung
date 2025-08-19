@@ -9,7 +9,7 @@ const testimonials = [
     name: "Sarah Putri",
     role: "Mahasiswa UI",
     image:
-      "https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&h=60&w=60&fit=crop",
+      "/sarah.jpg",
     rating: 5,
     text:
       "Pelayanan sangat cepat dan hasil print berkualitas tinggi! Harga juga sangat terjangkau untuk kantong mahasiswa. Sudah langganan di sini sejak semester 1.",
@@ -18,7 +18,7 @@ const testimonials = [
   {
     name: "Budi Santoso",
     role: "Karyawan Swasta",
-    image: "pelayan-toko.jpg",
+    image: "/pelayan-toko.jpg",
     rating: 5,
     // Escape tanda kutip ganda di dalam string
     text:
@@ -29,7 +29,7 @@ const testimonials = [
     name: "Dr. Maya Sari",
     role: "Dosen",
     image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&h=60&w=60&fit=crop",
+      "/drMaya.jpg",
     rating: 5,
     text:
       "Untuk kebutuhan print materi kuliah dan penelitian, CopyCenter selalu jadi pilihan utama. Hasil jilid spiral rapi dan tahan lama.",

@@ -36,7 +36,7 @@ export function LocationSection() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Lokasi CopyCenter Cirebon"
+                  title="Lokasi Toko Agung Setu Wetan"
                 ></iframe>
               </div>
               <CardContent className="p-4">
@@ -110,7 +110,7 @@ export function LocationSection() {
                         </div>
                         <div>
                           <span className="text-sm">Email:</span>
-                          <span className="font-medium ml-2">info@copycenter.com</span>
+                          <span className="font-medium ml-2">info@tokoagung.com</span>
                         </div>
                       </div>
                     </div>

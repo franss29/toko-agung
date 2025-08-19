@@ -218,7 +218,7 @@ Saya akan mengirim file melalui WhatsApp ini.`
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Email:</span>
-                    <span className="font-medium">info@copycenter.com</span>
+                    <span className="font-medium">info@tokoagung.com</span>
                   </div>
                 </div>
               </CardContent>

@@ -10,19 +10,19 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
-    src: "/images/properti-1.jpg",
+    src: "/properti1.jpg",
     alt: "Properti 1",
   },
   {
-    src: "/images/properti-2.jpg",
+    src: "/properti2.jpg",
     alt: "Properti 2",
   },
   {
-    src: "/images/properti-3.jpg",
+    src: "/properti3.jpg",
     alt: "Properti 3",
   },
   {
-    src: "https://images.unsplash.com/photo-1572120360610-d971b9b78847",
+    src: "/properti4.jpg",
     alt: "Properti Unsplash",
   },
 ];
@@ -39,7 +39,7 @@ export default function GallerySection() {
   };
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-16" id="gallery">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800">Galeri Properti</h2>
