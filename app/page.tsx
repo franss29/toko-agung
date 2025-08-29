@@ -5,7 +5,7 @@ import { LocationSection } from "@/components/locationSection";
 import { PricingSection } from "@/components/pricingSection";
 import { ServicesSection } from "@/components/servicesSection";
 import { TestimonialsSection } from "@/components/testimonialsSection";
-import { UploadSection } from "@/components/uploadSection";
+import { ShoppingCatalog } from "@/components/shoppingCatalog";
 import { FAQSection } from "@/components/faqSection";
 import { ContactSection } from "@/components/contactSection";
 import { Footer } from "@/components/footer";
@@ -21,7 +21,7 @@ export default function Home (){
             <AboutSection />
             <ServicesSection />
             <PricingSection />
-            <UploadSection />
+            <ShoppingCatalog />
             <LocationSection />
             <TestimonialsSection />
             <GallerySection />

@@ -24,7 +24,7 @@ const navigationItems = [
     ],
   },
   { name: "Harga", href: "#pricing" },
-  { name: "Katalog", href: "#upload" },
+  { name: "Katalog", href: "#katalog" },
   { name: "Lokasi", href: "#location" },
   { name: "Galeri", href: "#gallery" },
   { name: "FAQ", href: "#faq" },
@@ -174,7 +174,7 @@ export function Header() {
                 variant="outline"
                 size="sm"
                 className="border-[#00C559] text-[#00C559] hover:bg-[#00C559]/5 bg-transparent"
-                onClick={() => scrollToSection("#upload")}
+                onClick={() => scrollToSection("#katalog")}
               >
                 Lihat Katalog
               </Button>
